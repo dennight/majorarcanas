@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@400;700&display=swap')
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    &::after, &::before
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+
+html
+    font-size: 16px
+
+body
+    background-color: #000000
+    padding: 20px 50px
+
+.heading
+    font-family: 'Open Sans', sans-serif
+    font-weight: 700
+    font-size: 3rem
+    line-height: 2
+    text-align: center
+    margin-top: 50px
+    margin-bottom: 50px
+    color: #FFFFFF
+
+.text
+    font-family: 'Open Sans', sans-serif
+    font-weight: 400
+    font-size: 1rem
+    line-height: 1.65
+    text-align: left
+    margin-bottom: 10px
+    color: #FFFFFF
+    &:last-of-type
+        margin-bottom: 50px
+
+.container
+    width: 80%
+    margin: auto
+    padding: 20px
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-around   
+
+@media screen and (max-width: 576px)
+    .container
+        width: 95% 
+    
+.card
+    background-color: transparent
+    width: 197px
+    height: 342px
+    perspective: 1000px
+    margin-bottom: 30px
+    &:hover
+        .card-inner
+            transform: rotateY(180deg)
+
+.card-inner
+    position: relative
+    widows: 100%
+    height: 100%
+    text-align: center
+    transition: transform 0.8s
+    transform-style: preserve-3d
+
+
+.card-front, .card-back
+    position: absolute
+    width: 100%
+    height: 100%
+    backface-visibility: hidden
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px
+
+.card-front
+    background-color: #FFFFFF
+
+.card-back
+    background-color: #000000
+    transform: rotateY(180deg)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding-left: 10px
+    padding-right: 10px
+
+.card-description
+    font-family: 'Open Sans Condensed', sans-serif
+    font-weight: 300
+    font-size: 0.8rem
+    color: #FFFFFF
+    margin-bottom: 20px
+    line-height: 1.5
+    letter-spacing: 1.25px
+
+@media screen and (max-width: 768px)
+    .card-description
+        font-size: 0.8rem
+        line-height: 1.5
+
+.bold
+    font-family: 'Open Sans Condensed', sans-serif
+    font-weight: 700 
